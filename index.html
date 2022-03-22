@@ -66,7 +66,7 @@
         }
 
         #tapCount {
-            font-size: 14rem;
+            font-size: 12rem;
             display: block;
         }
         
@@ -78,23 +78,25 @@
             background: transparent;
             border-radius: 50%;
             border: 0;
-            max-width: 600px;
+            max-width: 500px;
             height: auto;
-            padding: 2rem;
+            padding: 0;
             position: relative;
             transform: translate(0, 0);
             display: block;
-            margin: 3rem auto 0;
+            margin: 0 auto;
             outline: none;
         }
 
-        #tapper:active {
+        #tapper:active, 
+        [data-touch="true"] #tapper:hover {
             background: transparent url('fx.png') no-repeat center 15px;
             background-size: contain;
             transform: translate(0, 2px);
         }
 
-        #tapper:disabled, #tapper[disabled]{
+        #tapper:disabled,
+         #tapper[disabled]{
             opacity: .1;
             pointer-events: none;
         }
@@ -105,14 +107,12 @@
 
         .wrapper{
             width: 100%;
-            padding: 2rem;
+            padding: 1rem;
         }
-        #title {
-            
-        }
+       
 
         header {
-            margin: 0 0 5rem 0;
+            margin: 0 0 3rem 0;
             padding: 1rem;
         }
 
@@ -140,9 +140,6 @@
     <body data-active="false" data-done="">
         <div class="wrapper">
             <header>
-               <!-- <h1 id="title">Hvor mange Nok Nok klarer du på 20 sekunder?</h1> -->
-                <!--<p id="helper">Trykk på hånda for å begynne</p>-->
-
                 <img id="logo" src="logo.png" alt="">
             </header>
 
@@ -210,6 +207,23 @@
                     updateDisplay(Date.now() - startTime);
                 });
             }
+
+            var isTouchDevice = function () {
+                return (
+                    !!(typeof window !== 'undefined' &&
+                        ('ontouchstart' in window ||
+                            (window.DocumentTouch &&
+                                typeof document !== 'undefined' &&
+                                document instanceof window.DocumentTouch))) ||
+                    !!(typeof navigator !== 'undefined' &&
+                        (navigator.maxTouchPoints || navigator.msMaxTouchPoints))
+                );
+            };
+
+            window.addEventListener('load', function () {
+                document.body.setAttribute("data-touch", isTouchDevice());
+            });
+
 
         </script>
 
