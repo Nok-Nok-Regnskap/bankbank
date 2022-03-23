@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nok Nok Bank Bank</title>
+    <title>Nok Nok-spillet!</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#FFFBCC">
+    <meta name="msapplication-TileColor" content="#FFFBCC">
+    <meta name="theme-color" content="#154222">
 
     <link rel="stylesheet" href="assets/styles/cardinalfruit.css">
     <link rel="stylesheet" href="assets/styles/reset.css">
@@ -12,19 +20,29 @@
 
     
     <body data-active="false" data-done="">
+        <div class="hiddenBg"></div>
+
         <div class="wrapper">
             <header>
                 <img id="logo" src="assets/img/logo.png" alt="Nok Nok Logo">
             </header>
 
-            <h2 id="tapCount">0</h2>
-            <h2 id="timer">0</h2>
+            <div class="numbers">
+                <span id="tapCount">0</span>
+                <span id="timer">0</span>
+            </div>
 
-            <button id="tapper" onclick="onTap()">
-                <img src="assets/img/hand-sans-fx.png" alt="Nok Nok logo hand">
-            </button>
-
+            <div id="tapperWrapper">
+                <button id="tapper" onclick="onTap()">
+                    <span class="overlay"></span>
+                    <img class="fx" src="assets/img/fx.png" alt="">
+                    <img class="hand" src="assets/img/hand-sans-fx.png" alt="">
+                </button>
+            </div>
+            
+            <button class="refresh" onClick="window.location.reload();">Prøv igjen</button>
         </div>
+
 
         <script src="assets/scripts/main.js"></script>
 

@@ -25,7 +25,6 @@ function onTap() {
     countEl.innerHTML = count;
 
     if(count === 1){
-        console.log('first' + startTime);
         onStart();
     }
 }
@@ -66,4 +65,5 @@ let isTouchDevice = function () {
 
 window.addEventListener('load', function () {
     document.body.setAttribute("data-touch", isTouchDevice());
+    document.addEventListener("touchstart", function() {}, true);
 });
