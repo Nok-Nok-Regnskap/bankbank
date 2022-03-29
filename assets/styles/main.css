@@ -108,9 +108,9 @@ header {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-height: 550px) and (max-width: 650px) {
     #tapperWrapper {
-        width: 10rem;
+        width: 16rem;
     }
 }
 
