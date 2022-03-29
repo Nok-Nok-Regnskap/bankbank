@@ -110,7 +110,7 @@ header {
 
 @media only screen and (max-width: 900px) {
     #tapperWrapper {
-        max-width: 10rem;
+        width: 10rem;
     }
 }
 
