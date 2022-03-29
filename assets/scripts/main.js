@@ -1,7 +1,7 @@
 
 let count = 0;
 let elapsedTime = 0;
-const timeLimit = 1;
+const timeLimit = 20;
 
 let parsedTime, interval;
 
@@ -36,7 +36,7 @@ function onReset(){
     count = 0;
     timerEl.innerHTML = 0;
     countEl.innerHTML = 0;
-    
+
     document.body.setAttribute('data-active', 'false');
     document.body.setAttribute('data-done', 'false');
 }
