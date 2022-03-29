@@ -1,0 +1,71 @@
+/*
+	Copyright (C) Production Type
+	This software is the property of Production Type.
+	Your right to access and use this software is subject to the
+	applicable License Agreement, or Terms of Service, that exists
+	between you and Production Type. If no such agreement exists,
+	you may not access or use this software for any purpose.
+	This software may only be hosted at the locations specified in
+	the applicable License Agreement or Terms of Service, and only
+	for the purposes expressly set forth therein. You may not copy,
+	modify, convert, create derivative works from or distribute this
+	software in any way, or make it accessible to any third party,
+	without first obtaining the written permission of Production Type.
+	For more information, please visit us at www.productiontype.com
+*/
+            @font-face {
+                font-family: 'cardinalfruit-bold';
+                    src: url('../');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-bold.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-bold.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-bolditalic';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-bolditalic.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-bolditalic.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-italic';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-italic.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-italic.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-medium';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-medium.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-medium.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-mediumitalic';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-mediumitalic.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-mediumitalic.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-regular';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-regular.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-regular.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-semibold';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-semibold.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-semibold.woff') format('woff')
+                    }
+            @font-face {
+                font-family: 'cardinalfruit-semibolditalic';
+                    src: url('../fonts/');
+                    src: url('../fonts/?#iefix') format('embedded-opentype'),
+                         url('../fonts/cardinalfruitweb-semibolditalic.woff2') format('woff2'),
+                         url('../fonts/cardinalfruitweb-semibolditalic.woff') format('woff')
+                    }

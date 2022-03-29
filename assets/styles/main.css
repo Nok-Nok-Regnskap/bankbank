@@ -1,0 +1,172 @@
+
+* {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+:root{
+    --noknok-beige: #FFFBCC;
+    --noknok-green: #154222;
+}
+
+body {
+    font-family: 'cardinalfruit-medium', serif;
+    line-height: 1;
+    text-align: center;
+    background-color: var(--noknok-beige);
+    color: var(--noknok-green);
+    transition: .2s background-color .2s ease-out;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.hiddenBg{
+    background-image: url('../img/fx.png');
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10000px;
+    left: -10000px;
+}
+
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+#logo {
+    max-width: 350px;
+    height: auto;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.numbers span {
+    display: block;
+}
+
+
+#tapCount {
+    font-size: 12rem;
+    display: block;
+    transform: scale(1);
+    transition: .2s all .3s ease-out;
+}
+
+#timer {
+    font-size: 2rem;
+    margin: -.5rem 0 0 0;
+}
+
+#tapperWrapper{
+    max-width: 600px;
+    width: 80%;
+}
+
+#tapper .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+#tapper{
+    background: transparent;
+    border: 0;
+    height: auto;
+    padding: 0;
+    position: relative;
+    transform: translate(0, 0);
+    display: block;
+    outline: none;
+}
+
+#tapper span {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#tapper .fx {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transform: scale(1.2) translate(10px, 35px) rotate(10deg);
+}
+
+#tapper:active .hand {
+    transform: translate(0, 0);
+    transform: scale(1) rotate(0deg);
+}
+
+#tapper:active .hand {
+    transform: translate(0, 2px);
+    transform: rotate(3deg);
+}
+
+#tapper:active .fx{
+    opacity: 1;
+}
+
+#tapper:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#tapper:disabled,
+    #tapper[disabled]{
+    opacity: .1;
+    pointer-events: none;
+}
+
+.refresh{
+    opacity: 0;
+    background: transparent;
+    color: var(--noknok-beige);
+    border: 1px solid var(--noknok-beige);
+    border-radius: 30px;
+    padding: 1rem;
+    transition: .2s opacity 1s ease-out;
+    outline: 0;
+    text-decoration: none;
+}
+
+[data-done="true"] .refresh{
+    opacity: .8;
+}
+
+[data-active="true"] #timer {
+    opacity: .4;
+}
+
+[data-active="false"] #timer {
+    opacity: 0;
+}
+[data-done="true"] #logo {
+    opacity: .1;
+}
+
+[data-done="true"] {
+    background: var(--noknok-green);
+}
+[data-done="true"] #tapCount {
+    color: var(--noknok-beige);
+    transform: scale(2);
+}
