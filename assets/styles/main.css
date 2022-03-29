@@ -13,19 +13,16 @@
 /** { border: 1px solid red !important; }*/
 
 html {
-    height: 100%;
+    
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     line-height: 1.5;
     text-align: center;
     background-color: var(--noknok-beige);
     color: var(--noknok-green);
     transition: .2s background-color .2s ease-out;
     font-family: 'cardinalfruit-medium', serif;
-    touch-action: none;
 }
 
 .wrapper {
