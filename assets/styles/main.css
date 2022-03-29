@@ -10,24 +10,26 @@
     --noknok-beige: #FFFBCC;
     --noknok-green: #154222;
 }
+/** { border: 1px solid red !important; }*/
+
+html {
+    height: 100%;
+}
 
 body {
-    font-family: 'cardinalfruit-medium', serif;
-    line-height: 1;
+    min-height: 100%;
+    line-height: 1.5;
     text-align: center;
     background-color: var(--noknok-beige);
     color: var(--noknok-green);
     transition: .2s background-color .2s ease-out;
+    font-family: 'cardinalfruit-medium', serif;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
+    padding: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .hiddenBg{
@@ -40,43 +42,107 @@ body {
     left: -10000px;
 }
 
+header {
+    margin: 0 0 1rem 0;
+}
 
-h1 {
+.logo {
+    letter-spacing: -1px;
+    word-spacing: -0.1rem;
+}
+.info {
+    font-family: sans-serif;
+}
+
+.title {
     font-size: 3rem;
     text-align: center;
     line-height: 1.3;
 }
 
-#logo {
-    max-width: 350px;
-    height: auto;
-    display: block;
+@media only screen and (min-width: 600px) {
+    header {
+        margin: 1rem 0 3rem 0;
+    }
+    .title {
+        font-size: 6rem;
+        margin: 0 0 1rem 0;
+    } 
+    .info {
+        font-size: 1.25rem;
+    }
+    
+}
+
+
+.numbers {
+    position: relative;
+    top: 3rem;
+}
+
+#tapperWrapper {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 20rem;
+    
+}
+
+@media only screen and (min-height: 900px) {
+    #tapperWrapper {
+        bottom: 2rem;
+        transform: translate(50%, 0);
+        width: 20rem;
+        right: 50%;
+    }
+}
+
+@media only screen and (min-height: 800px) and (min-width: 850px) {
+    #tapperWrapper {
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #tapperWrapper {
+        max-width: 10rem;
+    }
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
+
 .numbers span {
     display: block;
 }
 
 
 #tapCount {
-    font-size: 12rem;
+    font-size: 5rem;
     display: block;
+    line-height: 1;
     transform: scale(1);
     transition: .2s all .3s ease-out;
+}
+
+@media only screen and (min-width: 600px) {
+    #tapCount {
+        font-size: 12rem;
+        transform: scale(1);
+    }
+}
+
+@media only screen and (min-height: 900px) {
+    #tapCount {
+        font-size: 8rem;
+    }
 }
 
 #timer {
     font-size: 2rem;
     margin: -.5rem 0 0 0;
-}
-
-#tapperWrapper{
-    max-width: 600px;
-    width: 80%;
 }
 
 #tapper .overlay {
@@ -86,17 +152,18 @@ img {
     z-index: 2;
 }
 
-
 #tapper{
     background: transparent;
     border: 0;
     height: auto;
     padding: 0;
     position: relative;
-    transform: translate(0, 0);
     display: block;
     outline: none;
+    cursor: pointer;
+    transform: translate(0, 0);
 }
+
 
 #tapper span {
     width: 100%;
@@ -146,6 +213,10 @@ img {
     transition: .2s opacity 1s ease-out;
     outline: 0;
     text-decoration: none;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 [data-done="true"] .refresh{
