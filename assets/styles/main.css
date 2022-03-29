@@ -46,6 +46,11 @@ header {
     margin: 0 0 1rem 0;
 }
 
+.endHeader {
+    background-color: red;
+    display: none;
+}
+
 .logo {
     letter-spacing: -1px;
     word-spacing: -0.1rem;
@@ -175,7 +180,7 @@ img {
     position: absolute;
     top: 0;
     opacity: 0;
-    transform: scale(1.2) translate(10px, 35px) rotate(10deg);
+    transform: scale(1) translate(0px, 5px) rotate(10deg);
 }
 
 #tapper:active .hand {
@@ -190,6 +195,7 @@ img {
 
 #tapper:active .fx{
     opacity: 1;
+    transform: scale(1.03) translate(1px, 6px) rotate(12deg)
 }
 
 #tapper:focus {
@@ -237,6 +243,10 @@ img {
 [data-done="true"] {
     background: var(--noknok-green);
 }
+[data-done="true"] .numbers {
+    top: 0;
+}
+
 [data-done="true"] #tapCount {
     color: var(--noknok-beige);
     transform: scale(2);
